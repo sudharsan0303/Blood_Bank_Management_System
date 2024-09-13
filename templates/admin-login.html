@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Blood Bank</title>
+    <link rel="icon" href="images/logo.png" type="image/icon type">
+</head>
+<style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5; /* Off-white background */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Styles */
+.header-container {
+    width: 100%;
+    background-color: #B22222; /* Deep Red */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.login-container {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow for a more professional look */
+    padding: 40px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid #B22222; /* Adding a top border for a modern touch */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #B22222;
+    font-weight: 600; /* Slightly bolder heading for emphasis */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased spacing for a cleaner layout */
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555555; /* Slightly lighter color for a softer look */
+    font-weight: 500; /* Bolder text for labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px; /* More rounded corners for a modern look */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Light background inside input fields */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight inner shadow for depth */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #B22222; /* Highlight border on focus */
+    outline: none; /* Remove the default outline */
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for button press effect */
+    width: 100%;
+}
+
+button:hover {
+    background-color: #8B0000;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    background-color: #8B0000;
+    transform: translateY(0); /* Reset position on click */
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background-color: #B22222; /* Deep Red */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    position: fixed;
+}
+
+footer h5 {
+    margin: 0;
+    font-size: 14px;
+}
+
+</style>
+<body>
+    <div class="header-container">
+        <header>
+            <h1><a href="home.html">Blood Bank</a></h1>
+        </header>
+    </div>
+
+    <main>
+        <section class="login-container">
+            <h3>Admin Login</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h5>&copy; 2024 Blood Bank Management System. All rights reserved.</h5>
+    </footer>
+</body>
+</html>
