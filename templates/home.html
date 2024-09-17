@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <link rel="icon" href="images/logo_image.png" type="image/icon type"> <!-- Ensure 'images/logo.png' exists -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #B22222; /* Deep Red */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding-top: 100px; /* Adjust to account for fixed header height */
+            padding-bottom: 50px; /* Adjust to account for fixed footer height */
+        }
+
+        .container h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Adds vertical space between buttons */
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #f44336; /* Red button */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            width: 200px;
+            text-align: center;
+        }
+
+        .buttons a:hover {
+            background-color: #d32f2f;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #B22222; /* Deep Red */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer h5 {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Blood Bank</h1>
+    </div>
+
+    <div class="container">
+        <div>
+            <h2>Welcome to Blood Bank</h2>
+            <div class="buttons">
+                <a href="{{ url_for('admin_login') }}">Admin Login</a>
+                <a href="{{ url_for('user_login') }}">User Login</a>
+                <a href="{{ url_for('create_account') }}">Create Account</a>
+                <a href="{{ url_for('contact_us') }}">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h5>© 2024 Blood Bank. All rights reserved.</h5>
+    </div>
+
+</body>
+</html>
