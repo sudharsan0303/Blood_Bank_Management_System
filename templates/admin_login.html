@@ -7,6 +7,11 @@
     <link rel="icon" href="images/logo.png" type="image/icon type">
 </head>
 <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Gabriela&display=swap');
+
     /* General Styles */
     body {
         margin: 0;
@@ -37,7 +42,10 @@
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
+            font-family: "Bree Serif", serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         header h1 a {
@@ -47,6 +55,10 @@
 
         /* Navigation bar styles */
         nav a {
+            font-family: "Arvo", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
             color: white;
             text-decoration: none;
             margin: 0 20px; /* Increased margin for more space */
@@ -79,6 +91,18 @@
         border-top: 5px solid #B22222; /* Adding a top border for a modern touch */
     }
 
+    .login-container h3 {
+        font-family: "Gabriela", serif;
+        font-weight: 400;
+        font-style: normal;
+        display: block;
+        font-size: 1.17em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
     .login-container h2 {
         margin-bottom: 20px;
         color: #B22222;
@@ -163,16 +187,30 @@
 
         <!-- Navigation bar -->
         <nav>
-            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}">Home </a>
             <a href="{{ url_for('user_login') }}">User Login</a>
             <a href="{{ url_for('create_account') }}">Create account</a>
+            <a href="{{ url_for('contact_us') }}">contact Us</a>
         </nav>
     </div>
 
     <main>
         <section class="login-container">
             <h3>Admin Login</h3>
-            <form action="#" method="post">
+
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash flash-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form id="loginform" method="post" action="{{ url_for('admin_login') }}">
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
