@@ -30,6 +30,10 @@ The Blood Bank Management System is a web application designed to help blood ban
    - Run the command: `pip install Flask Werkzeug Flask-SQLAlchemy Flask-CORS`
 
 ## Running the Application:
-1. Open the Command Line in VS Code.
-2. Run the application with the following command: `python app.py`
-3. Or, right-click the app.py file and select Run in Terminal.
+1. Check the database files (`user_data.db`, `donar_data.db`, `request_data.db`) located in the `data` folder.
+   - if `user_data.db` is missing, then run `setup_user_database.py` file to create a user database.
+   - if `donar_data.db` is missing, then run  `setup_donar_database.py` file to create a donar database.
+   - if `request_data.db` is missing, then run `setup_request_database.py` file to create a request database.
+2. Open the Command Line in VS Code.
+3. Run the application with the following command: `python app.py`
+4. Or, right-click the app.py file and select Run in Terminal.
